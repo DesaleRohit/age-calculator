@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: 'Sansita Swashed', sans-serif;
+  }
+  body {
+    @apply min-h-screen overflow-x-hidden bg-white p-5;
+  }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.noise-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -20;
+  pointer-events: none;
+}
